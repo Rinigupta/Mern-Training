@@ -1,0 +1,98 @@
+1.Write a function calculate that takes three arugments from the user, say num1 , num2, and operation(1==add, 2==subtract, 
+3==multiply, 4==divide ).Don`t use switch statement or if else statements
+ 
+1.add,
+2.subtract,
+3.multiply,
+4.divide 
+
+write the calc function for all the operation.
+
+SOL-1.
+
+2 . Create a function Named Triangle which takes 3 parameters, say A, B and C denoting the 3 sides of a triangle.
+Use Callback function, create a method to check if the triangle is Equilateral or not.
+
+
+Output:
+"true" if the triangle is equilateral and "false" if its not.
+
+SOL-2.function triangle(a,b,c){
+  return (a==b && b==c)?"true":"false";
+}
+function Calc(fn){
+    console.log(fn);}
+
+
+ Calc(triangle(4,4,4));
+
+
+3.Given two strings, return true if they are anagrams of one another
+
+For example: Mary is an anagram of Army.
+
+SOL-3.function anagram(){
+    var a1=['a','r','m','y'];
+    var a2=['a','x','z','y'];
+    var l1=a1.length;
+    var l2=a2.length;
+
+    if(l1!=l2)return false;
+    a1.sort();
+    a2.sort();
+    for(var i=0;i<l1;i++){
+        if(a1[i]!=a2[i]) 
+            return false;
+    }
+    return true;}
+
+
+4. Create a function Employee, having id, name, basic_Salary as arguments.
+
+Compute HRA, DA, TA, GS, NS.
+
+HRA is 30% of Basic Salary.
+DA is 10% of Basic Salary.
+TA is 20% of Basic Salary.
+
+GS = Basic Salary + HRA + DA + TA;
+
+TAX DEDUCTION is 10% of GS.
+
+NS = GS - TAX DEDUCTION.
+
+NOte : Use Basic Salary in Lexical Scope 
+Print salary slip of the employee.
+
+SOL-4.unction Employee(id,name,bsal){
+    
+    var HRA=bsal*0.3;
+    console.log("HRA="+HRA);
+    var DA=bsal*0.1;
+    console.log("DA="+DA);
+    var TA=bsal*0.2;
+   console.log("TA="+TA);
+
+    var GS=Math.round(bsal+HRA+DA+TA);
+    console.log("GS="+GS);
+
+    var TD=GS*0.1;
+    console.log("Tax Deduction="+TD);
+
+    var NS=GS-TD;
+    console.log("NS="+NS);}
+var id=3243;
+var name="rini";
+var bsal=500;
+
+5. Write a function to find the maximum and minimum elements in an array.
+arr = [10,3,15,-1,9,6]
+
+output = maxno. : 15
+			minno. : -1
+
+SOL-5.var array = [10,3,15,-1,9,6];
+array.sort((first, second)=>first-second);
+var l=array.length;
+console.log("maxno:"+array[l-1]);
+console.log("minno:"+array[0]);
