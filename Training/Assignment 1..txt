@@ -46,11 +46,31 @@ input  = brainmentors
 output = sbrainmentor
 
 
-
+SOL-4.function rotate(){
+    var name="brainmentors";
+    var check=name;
+    var j=check.length;
+    for(var i=0;i<j;i++){
+        var last=check.charAt(j-1);
+        var first=check.slice(0,j-1);
+        var s=last.concat(first);
+        check=s;
+        console.log(check);
+    }
+    }
+rotate();
 
 
 
 
 5.WAP to find out if 1st January will be a Sunday between 2000 and 2030
+SOl-5.function Find(){
+    for(var i=2000;i<2030;i++){
+        var date=new Date(i,0,1);
+        if(date.getDay()==0){
+            console.log(i);
+        }
+    }
+}
 
 
